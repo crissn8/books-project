@@ -11,17 +11,12 @@ insert into autor (name) values ("autor2");
 insert into autor (name) values ("autor3");
 
 
-insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial)values("libro1","catalan", "edicion1", "fecha1", "fecha1","editorial1");
-insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial)values("libro2","spanish", "edicion2", "fecha2", "fecha2","editorial2");
-insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial)values("libro3","english", "edicion3", "fecha3", "fecha3","editorial3");
-insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial)values("libro4","catalan", "edicion4", "fecha4", "fecha4","editorial4");
-insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial)values("libro5","spanish", "edicion5", "fecha5", "fecha5","editorial5");
+insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial, autor)values("libro1","catalan", "edicion1", "fecha1", "fecha1","editorial1","autor1");
+insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial, autor)values("libro2","spanish", "edicion2", "fecha2", "fecha2","editorial2","autor2");
+insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial, autor)values("libro3","english", "edicion3", "fecha3", "fecha3","editorial3","autor3");
+insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial, autor)values("libro4","catalan", "edicion4", "fecha4", "fecha4","editorial4","autor1");
+insert into libros (titulo,lengua, edicion, fecha_ed, fecha_imp, editorial, autor)values("libro5","spanish", "edicion5", "fecha5", "fecha5","editorial5","autor2");
 
-insert into RelacionAutorLibros values (1,1);
-insert into RelacionAutorLibros values (2,2);
-insert into RelacionAutorLibros values (3,3);
-insert into RelacionAutorLibros values (2,4);
-insert into RelacionAutorLibros values (2,5);
 
 insert into resenya (username,name,texto, libroid)values("cris","cris","eel mejor libro",1);
 insert into resenya (username,name,texto, libroid)values("adri","adri","un libro horrible",2);

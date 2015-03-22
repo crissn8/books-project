@@ -7,5 +7,8 @@ public class MediaType {
 	public final static String BOOKS_API_BOOKS = "application/vnd.books.api.books+json";
 	public final static String BOOKS_API_BOOKS_COLLECTION = "application/vnd.books.api.books.collection+json";
 	public final static String BOOKS_API_ERROR = "application/vnd.dsa.books.error+json";
+	public final static String BOOKS_API_AUTOR = "application/vnd.dsa.books.api.autores+json";
+	public final static String BOOKS_API_RESENYA_COLLECTION = "application/vnd.books.api.resenya.collection+json";
+	public final static String BOOKS_API_RESENYA = "application/vnd.books.api.resenya+json";
 
 }

@@ -17,8 +17,7 @@ create table user_roles (
 );
 
 create table autor (
-autorid 	int not null auto_increment primary key,
-name 		varchar(20) not null
+name 		varchar(40) not null primary key
 );
  
 create table libros (
@@ -28,19 +27,12 @@ lengua 			varchar(20) not null,
 edicion 		varchar(20) not null,
 fecha_ed 		varchar(20) not null,
 fecha_imp 		varchar(20) not null,
-editorial		varchar(20) not null
-);
-
-
-
-create table RelacionAutorLibros (
-autorid int not null,
-libroid int not null,
-foreign key(autorid) references autor(autorid) on delete cascade,
-foreign key(libroid) references libros(libroid) on delete cascade,
-primary key (autorid, libroid)
+editorial		varchar(20) not null,
+autor 			varchar(40) not null,
+foreign key (autor) references autor (name) on delete cascade
 
 );
+
 
 create table resenya (
 resenyaid               int not null auto_increment primary key,
@@ -49,7 +41,7 @@ name 					varchar(20) not null,
 last_modified			timestamp default current_timestamp ON UPDATE CURRENT_TIMESTAMP,
 creation_timestamp		datetime not null default current_timestamp,
 texto 					varchar(500) not null,
-libroid int not null,
+libroid 				int not null,
 
 foreign key(username) references users(username) on delete cascade,
 foreign key(libroid) references libros(libroid) on delete cascade,
