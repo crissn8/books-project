@@ -236,7 +236,7 @@ public class BooksResource {
 		
 		//Get libros por titulo
 		
-	/*	private String GET_BOOK_BY_TITULO = "select * from libros where titulo like ?";
+		private String GET_BOOK_BY_TITULO = "select * from libros where titulo like ?";
 		 
 		@GET
 		@Path("/titulo/{titulo}")
@@ -280,7 +280,7 @@ public class BooksResource {
 					while (rs2.next()){
 						Books b = new Books();
 						b.setAutor(rs2.getString("name"));
-					}
+					}*/
 					
 					books.addBook(book);
 				}
@@ -298,7 +298,7 @@ public class BooksResource {
 			}
 		 
 			return books;
-		}*/
+		}
 		
 		
 		
@@ -323,17 +323,17 @@ public class BooksResource {
 				
 				ResultSet rs = stmt.executeQuery();
 				while (rs.next()) {
-					Books book = new Books();
-					book.setLibroid(rs.getInt("libroid"));
-					book.setTitulo(rs.getString("titulo"));
-					book.setLengua(rs.getString("lengua"));
-					book.setEdicion(rs.getString("edicion"));
-					book.setFecha_ed(rs.getString("fecha_ed"));
-					book.setFecha_imp(rs.getString("fecha_imp"));
-					book.setEditorial(rs.getString("editorial"));
-					book.setAutor(rs.getString("autor"));
+					Books b = new Books();
+					b.setLibroid(rs.getInt("libroid"));
+					b.setTitulo(rs.getString("titulo"));
+					b.setLengua(rs.getString("lengua"));
+					b.setEdicion(rs.getString("edicion"));
+					b.setFecha_ed(rs.getString("fecha_ed"));
+					b.setFecha_imp(rs.getString("fecha_imp"));
+					b.setEditorial(rs.getString("editorial"));
+					b.setAutor(rs.getString("autor"));
 					
-					books.addBook(book);
+					books.addBook(b);
 				}
 			} catch (SQLException e) {
 				throw new ServerErrorException(e.getMessage(),

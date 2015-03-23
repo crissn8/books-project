@@ -75,8 +75,7 @@ public class UserResource {
 				try {
 					conn.rollback();
 				} catch (SQLException e1) {
-				}
-			throw new ServerErrorException(e.getMessage(),
+				} throw new ServerErrorException(e.getMessage(),
 					Response.Status.INTERNAL_SERVER_ERROR);
 		} finally {
 			try {
